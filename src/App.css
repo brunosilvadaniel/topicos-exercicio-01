@@ -1,11 +1,3 @@
-/* .App {
-  max-width: 1190px;
-  margin: 12px auto;
-  border: 1px solid #d0d0d0;
-  padding: 9px;
-  border-radius: 6px;
-} */
-
 @media screen and (max-width: 1189px) {
   .App {
     border-radius: 0;
