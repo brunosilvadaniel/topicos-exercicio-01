@@ -1,10 +1,10 @@
-.App {
+/* .App {
   max-width: 1190px;
   margin: 12px auto;
   border: 1px solid #d0d0d0;
   padding: 9px;
   border-radius: 6px;
-}
+} */
 
 @media screen and (max-width: 1189px) {
   .App {
@@ -15,10 +15,13 @@
 }
 
 .App header {
-  background-color: #ededed;
-  padding: 12px;
-  border-radius: 6px;
+  background-color: transparent;
+  padding: 23px 12px 0 75px;
+  border-radius: 0;
+  border-bottom: 1px solid #89cbed;
+  height: 50px;
 }
+
 .App header h2 {
   line-height: 1;
   padding: 0;
@@ -26,15 +29,13 @@
 }
 
 .App .form-add-item {
-  background-color: #fcfcfc;
-  border: 1px solid #f6f6f6;
-  padding: 9px 12px;
-  border-radius: 6px;
+  background-color: transparent;
+  padding: 0 0 0 25px;
 }
 
 .App .lista-compras-container {
-  padding: 21px 0;
-  max-height: 310px;
+  padding: 0;
+  max-height: 300px;
   overflow: auto;
 }
 
@@ -43,9 +44,49 @@
   padding-bottom: 0;
   font-size: 18px;
 }
-.App .lista-items li:nth-child(2n) {
-  background-color: #fcfcfc;
-}
+
 .App .lista-items li + li {
   margin-top: 7px;
+}
+
+body {
+  background-color: #FFFEAB;
+  font-family: 'Indie Flower', cursive;
+}
+
+body:before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 50px;
+  background-color: #e8918f;
+  z-index: -1;
+}
+
+ul.lista-items {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.App {
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #89cbed;
+  border-radius: 0 !IMPORTANT;
+  padding: 14px 0 0 85px !important;
+  height: 35px;
+  font-size: 20px;
+}
+
+li:before {content: '- ';}
+
+.lista-compras-container {
+  padding: 0px !important;
+}
+
+form.form-add-item {
+  margin-left: 51px;
 }
