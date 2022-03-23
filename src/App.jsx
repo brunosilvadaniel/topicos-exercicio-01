@@ -1,29 +1,23 @@
 import "./App.css";
+import React, { useState, useEffect, useRef } from "react";
+import Form from './Form.jsx'
+import Lista from './Lista.jsx'
 
 function App() {
+
+  function fcAdicionar(item){
+    setItens([item, ...itens])
+  }
+
+  const [itens, setItens] = useState([]);
+
   return (
     <div className="App">
       <header>
         <h2>Lista de Compras:</h2>
       </header>
-      <div className="lista-compras-container">
-        <ul className="lista-items">
-          <li>Queijo</li>
-          <li>Leite</li>
-          <li>Pão</li>
-        </ul>
-      </div>
-      <form className="form-add-item" action="#" method="post">
-        <fieldset>
-          <div className="form-group mb-3">
-            <label htmlFor="item">Adicionar Novo Item na Lista:</label>
-            <input type="text" className="form-control" id="item" />
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Adicionar
-          </button>
-        </fieldset>
-      </form>
+      <Lista itens={itens} />
+      <Form fcAdicionar={fcAdicionar}/>
     </div>
   );
 }
